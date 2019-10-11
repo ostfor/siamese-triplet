@@ -85,3 +85,6 @@ class TripletNetTexture(Dataset):
             for i in range(len(ims)):
                 ims[i] = self.transform(ims[i])
         return tuple(ims), []
+
+    def __len__(self):
+        return len(self.general_dataset)
